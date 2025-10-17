@@ -1,0 +1,140 @@
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: .5rem 1rem;
+    box-shadow: var(--sh-1);
+}
+
+.nav__container {
+    width: 100%;
+    padding: .7rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10;
+    background: var(--white) ;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+
+.logo__text {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--primary);
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: fit-content;
+    transition: .3s ease-in-out;
+    background-color: var(--white);
+}
+
+.nav__link {
+    border: none;
+    color: var(--foreground);
+    font-weight: 500;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav__link:hover {
+    color: var(--primary);
+}
+
+.nav__link:hover::after {
+    width: 100%;
+}
+
+.nav__cta {
+    display: block;
+}
+
+.mobile__menu__toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.nav__links.active{
+    transform: translateY(100%);
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+}
+
+@media (width < 768px) {
+    .nav__container{
+        padding-inline: 0;        
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .logo{
+        isolation: isolate;
+        z-index: 1000;
+        width: 100%;
+        padding-inline: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+
+    .nav__links{
+        position: absolute;
+        padding-block: 2rem;
+        width: 100%;
+        flex-direction: column;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .nav__cta {
+        display: none;
+    }
+
+    .mobile__menu__toggle{
+        display: block;
+    }
+}
