@@ -1,5 +1,5 @@
-## trav.com - Travel website
-Explore destinations, plan trips, and discover adventures with travel.com – your ultimate travel companion.
+## Voya - Travel website
+ A travel website that helps you discover destinations, plan trips, and find inspiration for your next adventure.
 
 ## ✨ Demo
 ![img](https://github.com/ch16447/Voya/blob/main/voya.png?raw=true)
@@ -24,6 +24,6 @@ Explore destinations, plan trips, and discover adventures with travel.com – yo
 ### Clone Repositories
 
 ```
-git clone https://github.com/ch16447/trav.com.git
-cd trav.com
+git clone https://github.com/ch16447/voya.git
+cd voya
 ```
